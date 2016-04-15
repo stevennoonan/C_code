@@ -1,0 +1,113 @@
+// ConsoleApplication1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdio.h"
+#define Triangle 1
+#define Circle 2
+#define Rectangle 3
+#define Trapezoid 4
+#define Square 5
+#define Parallelogram 6
+#define Sector 7
+#define Ellipse 8 
+
+
+void main()
+{
+	int ShapeChoice = 0;
+	float Base;
+	float Height;
+	float AreaTri;
+	float AreaC;
+	float AreaRec;
+	float Radius;
+	float Top;
+	float AreaTrap;
+	float AreaSquare;
+	float AreaPar;
+	float AreaSec;
+	float AreaEll;
+	float Angle;
+	float Minr;
+	float Majr;
+
+
+	printf("Enter choice: \n 1 Triangle \n 2 Circle \n 3 Rectangle \n 4 Trapezoid \n 5 Square \n 6 Parallelogram \n 7 Sector \n 8 Ellipse \n");
+	scanf_s("%d", &ShapeChoice);
+
+	switch (ShapeChoice)
+	{
+	case Triangle:
+		printf("Enter Base Width: \n");
+		scanf_s("%f", &Base);
+		printf("Enter Height: \n");
+		scanf_s("%f", &Height);
+		AreaTri = 0.5*Base*Height;
+		printf("Area = %f", AreaTri);
+		break;
+
+	case Circle:
+		printf("Enter Radius: \n");
+		scanf_s("%f", &Radius);
+		AreaC = 3.14*Radius;
+		printf("Area = %f", AreaC);
+		break;
+
+	case Rectangle:
+		printf("Enter Base Width: \n");
+		scanf_s("%f", &Base);
+		printf("Enter Height: \n");
+		scanf_s("%f", &Height);
+		AreaRec = Base*Height;
+		printf("Area = %f", AreaRec);
+		break;
+
+	case Trapezoid:
+		printf("Enter Base Width: \n");
+		scanf_s("%f", &Base);
+		printf("Enter Top Width: \n");
+		scanf_s("%f", &Top);
+		printf("Enter Height: \n");
+			scanf_s("%f", &Height);
+		AreaTrap = 0.5*(Base + Top)*Height;
+		printf("Area = %f", AreaTrap);
+		break;
+
+	case Square:
+		printf("Enter Width: \n");
+		scanf_s("%f", &Base);
+		AreaSquare = Base*Base;
+		printf("Area = %f", AreaSquare);
+		break;
+
+	case Parallelogram:
+		printf("Enter Base Width: \n");
+		scanf_s("%f", &Base);
+		printf("Enter Height: \n");
+		scanf_s("%f", &Height);
+		AreaPar = Base*Height;
+		printf("Area = %f", AreaPar);
+		break;
+
+	case Sector:
+		printf("Enter Radius: \n");
+		scanf_s("%f", &Radius);
+		printf("Enter Angle Measurement in radians: \n");
+		scanf_s("%f", &Angle);
+		AreaSec = 0.5*Radius*Radius*Angle;
+		printf("Area = %f", AreaSec);
+		break;
+
+	case Ellipse:
+		printf("Enter Minor Radius: \n");
+		scanf_s("%f", &Minr);
+		printf("Enter Major Radius: \n");
+		scanf_s("%f", &Majr);
+		AreaEll = 3.14*Minr*Majr;
+		printf("Area = %f", AreaEll);
+		break;
+	}
+
+
+}
